@@ -1,9 +1,9 @@
 ﻿<?php
 $new = true;
 $pid = filter_input(
-    INPUT_GET, 
-    'pid', 
-    FILTER_VALIDATE_REGEXP, 
+    INPUT_GET,
+    'pid',
+    FILTER_VALIDATE_REGEXP,
     array(
         "options" => array("regexp" => "/^[a-z0-9]{32}/")
     )

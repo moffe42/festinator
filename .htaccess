@@ -1,2 +1,9 @@
-//Change default directory page
-DirectoryIndex www
+RewriteEngine on
+
+RewriteRule ^([0-9a-z]{32})$ index.php?pid=$1 [L]
+RewriteRule ^([0-9]{1,9})$ showposter.php?id=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule .* index.php [L]
