@@ -49,7 +49,7 @@ if ($pid) {
 					        <input type="submit" value="Se offentlig link">
 					    </form>
 					    <a class="redbutton" href="http://www.facebook.com/share.php?u=<?php echo rawurlencode('http://www.misserpirat.dk/festinator/' . $poster->getId()); ?>&t=Picnic%20Fyn">Share</a>
-					    <a class="button" target="preview" onclick="setHash('image_background.html,pdf')" href="/festinator/dompdf/dompdf.php?options[Attachment]=0&amp;input_file=image_background.html#toolbar=0&amp;view=FitH&amp;statusbar=0&amp;messages=0&amp;navpanes=0">PDF</a>
+					    <a class="redbutton" href="dompdf.php?input_file=<?php echo rawurlencode('http://www.misserpirat.dk/festinator/pdfposter.php?id=' . $poster->getId()); ?>">PDF</a>
 					    <?php } ?>
 					<p>Din plakat bliver gemt i galleriet, hvor andre vil kunne se din fest-invitation.</p>
 				</div>

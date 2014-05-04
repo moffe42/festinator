@@ -1,9 +1,9 @@
 <?php
 
 $id = filter_input(
-    INPUT_GET, 
-    'id', 
-    FILTER_VALIDATE_REGEXP, 
+    INPUT_GET,
+    'id',
+    FILTER_VALIDATE_REGEXP,
     array(
         "options" => array("regexp" => "/^\d{1,10}/")
     )
@@ -29,16 +29,10 @@ if (!$poster->loadById($id)) {
 		<meta property="og:description" content="<?= $poster->getInvitation() ?>" />
 	</head>
 	<body>
-		<div id="container">
-			<div id="main">
-				<div id="postercontainer">
-					<div id="posterpdf">
-						<h1 id="posterheadline"><?= $poster->getHeadline() ?></h1>
-						<p id="posterinvitation"><?= str_replace(array("\r\n","\r","\n"),"<br/>", $poster->getInvitation()) ?></p>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div id="posterpdf">
+            <h1 id="posterheadline"><?= $poster->getHeadline() ?></h1>
+            <p id="posterinvitation"><?= str_replace(array("\r\n","\r","\n"),"<br/>", $poster->getInvitation()) ?></p>
+        </div>
 	</body>
 </html>
 

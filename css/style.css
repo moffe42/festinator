@@ -18,14 +18,14 @@
     margin-right: auto;
 }
 #footer {
-   clear: both;			
+   clear: both;
 }
 #plakat {
 	margin-top: 10px;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-} 
+}
 
 h1 {
 	font-family: 'Open Sans', 'sans-serif';
@@ -34,7 +34,7 @@ h1 {
 	font-size: 1.5em;
 	padding: 0px 25px 0px 25px;
 	color: #E63F21;
-} 
+}
 p {
 	font-family: 'Open Sans', 'sans-serif';
  	font-weight: 200;
@@ -60,7 +60,7 @@ input {
 	font-style: italic;
  	font-weight: 200;
 	font-size: 1em;
-} 
+}
 textarea {
 	width: 100%;
 	border: 1px solid #E63F21;
@@ -82,56 +82,56 @@ label {
 	color: #E63F21;
 }
 #postermockup{
-	position: relative; 
+	position: relative;
 }
-#postermockup h1 { 
-  	position: absolute; 
-   	top: 81px; 
-   	left: 30px; 
-   	width: 500px; 
+#postermockup h1 {
+  	position: absolute;
+   	top: 81px;
+   	left: 30px;
+   	width: 500px;
 	font-family: 'Open Sans', 'sans-serif';
 	font-style: italic;
  	font-weight: 400;
 	font-size: 3em;
 	color: #57453A;
-} 
+}
 #postermockup p {
-  	position: absolute; 
-   	top: 240px; 
-   	left: 30px; 
-   	width: 500px; 
+  	position: absolute;
+   	top: 240px;
+   	left: 30px;
+   	width: 500px;
 	font-family: 'Open Sans', 'sans-serif';
  	font-weight: 100;
 	font-size: 1em;
 	color: #57453A;
-} 
+}
 #posterpdf{
-	position: relative; 
+	position: relative;
 }
 #posterpdf {
     background-image: url(../image/plakat-large-notext.jpg);
     background-repeat: no-repeat;
-    width: 800px;
-    height: 1900px;
+    width: 600px;
+    height: 850px;
 }
-#posterpdf h1 { 
-  	position: absolute; 
-   	top: 81px; 
-   	left: 30px; 
-   	width: 500px; 
+#posterpdf h1 {
+  	position: absolute;
+   	top: 81px;
+   	left: 30px;
+   	width: 500px;
 	font-family: 'Open Sans', 'sans-serif';
 	font-style: italic;
  	font-weight: 400;
 	font-size: 3em;
 	color: #57453A;
-} 
+}
 #posterpdf p {
-  	position: absolute; 
-   	top: 240px; 
-   	left: 30px; 
-   	width: 500px; 
+  	position: absolute;
+   	top: 240px;
+   	left: 30px;
+   	width: 500px;
 	font-family: 'Open Sans', 'sans-serif';
  	font-weight: 100;
 	font-size: 1em;
 	color: #57453A;
-} 
+}
