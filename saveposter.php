@@ -32,4 +32,4 @@ $poster->setEmail($input['email']);
 $poster->setHeadline($input['headline']);
 $poster->setInvitation($input['invitation']);
 $poster->save();
-header('Location: http://www.picnic.dk/festinator/' . $poster->getPublicId());
+header('Location: http://www.picnicfyn.dk/festinator/' . $poster->getPublicId());
