@@ -32,7 +32,7 @@ if ($pid) {
 					<h1>Opret din egen unikke fest-i-festen</h1>
 					<p>Picnic Fyns "Festinator" giver dig muligheden for at inviterer venner og familie, til &aring;rets byfest med din helt egen plakat.</p>
 					<p>Inds&aelig;t din egen invitation, print plakaten og s&aelig;t den op i kantinen, fodboldklubben eller i klassev&aelig;relset.</p>
-					<form method="post" action="saveposter.php">
+					<form method="post" action="/festinator/saveposter.php">
 						<label>Overskrift</label>
 						<textarea name="headline" id="headline" maxlength="47"><?= $poster->getHeadline() ?></textarea>
 						<label>Invitation</label>
@@ -49,12 +49,12 @@ if ($pid) {
 					        <input type="submit" value="Se offentlig link">
 					    </form>
 					    <form method="get" action="http://www.facebook.com/share.php">
-					        <input type="hidden" name="u" value="<?php echo rawurlencode('http://www.misserpirat.dk/festinator/' . $poster->getId()); ?>">
+					        <input type="hidden" name="u" value="<?php echo rawurlencode('http://www.picnicfyn.dk/festinator/' . $poster->getId()); ?>">
 					        <input type="hidden" name="t" value="Picnic%20Fyn">
 					        <input type="submit" value="Del p&aring; facebook">
 					    </form>
-					    <form method="get" action="dompdf.php">
-					        <input type="hidden" name="input_file" value="<?php echo rawurlencode('http://www.misserpirat.dk/festinator/pdfposter.php?id=' . $poster->getId()); ?>">
+					    <form method="get" action="/festinator/dompdf.php">
+					        <input type="hidden" name="input_file" value="<?php echo rawurlencode('http://www.picnicfyn.dk/festinator/pdfposter.php?id=' . $poster->getId()); ?>">
 					        <input type="submit" value="Udskriv">
 					    </form>
 					    <?php } ?>

@@ -25,8 +25,8 @@ if (!$poster->loadById($id)) {
 		<link rel="stylesheet" type="text/css" href="/festinator/css/style.css?v=<?= time() ?>" >
 		<meta property="og:title" content="<?= $poster->getHeadline() ?>" />
 		<meta property="og:site_name" content="Picnic Fyn" />
-		<meta property="og:url" content="http://www.misserpirat.dk/festinator/<?= $poster->getId() ?>" />
-		<meta property="og:description" content="<?= $poster->getInvitation() ?>" />
+		<meta property="og:url" content="http://www.picnic.dk/festinator/<?= $poster->getId() ?>" />
+		<meta property="og:description" content="<?= $poster->getHeadline() ?>" />
 	</head>
 	<body>
 		<div id="container">

@@ -25,11 +25,11 @@ if ($input['pid']) {
     $poster->loadByPublicId($input['pid']);
 } else {
     if ($posterService->isEmailUsed($input['email'])) {
-        header('Location: http://www.misserpirat.dk/festinator/index.php?gg=ggg');
+        header('Location: http://www.picnicfyn.dk/festinator');
     }
 }
 $poster->setEmail($input['email']);
 $poster->setHeadline($input['headline']);
 $poster->setInvitation($input['invitation']);
 $poster->save();
-header('Location: http://www.misserpirat.dk/festinator/' . $poster->getPublicId());
+header('Location: http://www.picnic.dk/festinator/' . $poster->getPublicId());
