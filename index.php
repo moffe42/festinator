@@ -34,7 +34,7 @@ if ($pid) {
 					<p>Inds&aelig;t din egen invitation, print plakaten og s&aelig;t den op i kantinen, fodboldklubben eller i klassev&aelig;relset.</p>
 					<form method="post" action="saveposter.php">
 						<label>Overskrift</label>
-						<textarea name="headline" id="headline" maxlength="50"><?= $poster->getHeadline() ?></textarea>
+						<textarea name="headline" id="headline" maxlength="47"><?= $poster->getHeadline() ?></textarea>
 						<label>Invitation</label>
 						<textarea name="invitation" id="invitation" maxlength="1000"><?= $poster->getInvitation() ?></textarea>
 						<label>Din e-mail</label>
