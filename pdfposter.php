@@ -13,13 +13,14 @@ require_once "DB.php";
 $poster = new Poster($dbh);
 
 if (!$poster->loadById($id)) {
-    echo "Handle missing poster";
+    echo "No poster available";
     die;
 }
 ?>
 <html lang="da-DK">
 	<head>
 		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<link rel="stylesheet" type="text/css" href="/festinator/css/normalize.css" >
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="/festinator/css/style.css?v=<?= time() ?>" >

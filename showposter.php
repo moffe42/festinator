@@ -1,9 +1,9 @@
 <?php
 
 $id = filter_input(
-    INPUT_GET, 
-    'id', 
-    FILTER_VALIDATE_REGEXP, 
+    INPUT_GET,
+    'id',
+    FILTER_VALIDATE_REGEXP,
     array(
         "options" => array("regexp" => "/^\d{1,10}/")
     )
@@ -40,7 +40,6 @@ if (!$poster->loadById($id)) {
 				</div>
 			</div>
 		</div>
-		<a href="http://pdfcrowd.com/url_to_pdf/?height=-1">Save this page to a PDF</a>
 	</body>
 </html>
 

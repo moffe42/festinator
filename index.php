@@ -34,9 +34,9 @@ if ($pid) {
 					<p>Inds&aelig;t din egen invitation, print plakaten og s&aelig;t den op i kantinen, fodboldklubben eller i klassev&aelig;relset.</p>
 					<form method="post" action="saveposter.php">
 						<label>Overskrift</label>
-						<textarea name="headline" id="headline" maxlength="40"><?= $poster->getHeadline() ?></textarea>
+						<textarea name="headline" id="headline" maxlength="50"><?= $poster->getHeadline() ?></textarea>
 						<label>Invitation</label>
-						<textarea name="invitation" id="invitation" maxlength="600"><?= $poster->getInvitation() ?></textarea>
+						<textarea name="invitation" id="invitation" maxlength="1000"><?= $poster->getInvitation() ?></textarea>
 						<label>Din e-mail</label>
 						<input type="text" name="email" id="email" value="<?= $poster->getEmail() ?>">
 						<input type="hidden" name="pid" id="pid" value="<?= $poster->getPublicId() ?>">
@@ -48,8 +48,15 @@ if ($pid) {
 					    <form method="get" action="/festinator/<?= $poster->getId() ?>">
 					        <input type="submit" value="Se offentlig link">
 					    </form>
-					    <a class="redbutton" href="http://www.facebook.com/share.php?u=<?php echo rawurlencode('http://www.misserpirat.dk/festinator/' . $poster->getId()); ?>&t=Picnic%20Fyn">Share</a>
-					    <a class="redbutton" href="dompdf.php?input_file=<?php echo rawurlencode('http://www.misserpirat.dk/festinator/pdfposter.php?id=' . $poster->getId()); ?>">PDF</a>
+					    <form method="get" action="http://www.facebook.com/share.php">
+					        <input type="hidden" name="u" value="<?php echo rawurlencode('http://www.misserpirat.dk/festinator/' . $poster->getId()); ?>">
+					        <input type="hidden" name="t" value="Picnic%20Fyn">
+					        <input type="submit" value="Del p&aring; facebook">
+					    </form>
+					    <form method="get" action="dompdf.php">
+					        <input type="hidden" name="input_file" value="<?php echo rawurlencode('http://www.misserpirat.dk/festinator/pdfposter.php?id=' . $poster->getId()); ?>">
+					        <input type="submit" value="Udskriv">
+					    </form>
 					    <?php } ?>
 					<p>Din plakat bliver gemt i galleriet, hvor andre vil kunne se din fest-invitation.</p>
 				</div>

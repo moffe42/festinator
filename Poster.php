@@ -54,13 +54,13 @@ class Poster
     {
         return $this->invitation;
     }
-        
+
 	public function save()
 	{
 		if (is_null($this->id)) {
 			$this->insert();
 		} else {
-			$this->update();		
+			$this->update();
 		}
 	}
 
@@ -86,7 +86,7 @@ class Poster
         return $this->load($sql, array('publicid' => $publicId));
     }
 
-    private function load($sql, $params) 
+    private function load($sql, $params)
     {
         $stmt = $this->dbh->prepare($sql);
         $stmt->execute($params);
@@ -95,7 +95,7 @@ class Poster
 
         if (empty($row)) {
             return false;
-        }   
+        }
 
         $this->id         = $row[0]['id'];
         $this->publicId   = $row[0]['publicid'];
@@ -110,7 +110,7 @@ class Poster
 
 	private function insert()
     {
-        $sql = "INSERT INTO `festinator__poster` (`id`, `publicid`, `headline`, `invitation`, `email`, `created`, `updated`) 
+        $sql = "INSERT INTO `festinator__poster` (`id`, `publicid`, `headline`, `invitation`, `email`, `created`, `updated`)
                 VALUES (NULL, :publicid, :headline, :invitation, :email, CURRENT_DATE(), CURRENT_TIMESTAMP)";
 
         $stmt = $this->dbh->prepare($sql);
@@ -122,18 +122,20 @@ class Poster
         ));
 
         $this->id = $this->dbh->lastInsertId();
+
+        Mailer::mailReceipt($this->email, $this->headline, md5($this->email));
         return $this->loadById();
     }
 
     private function update()
     {
-        $sql = "UPDATE  `festinator__poster` 
+        $sql = "UPDATE  `festinator__poster`
                 SET  `headline` = :headline,
                      `invitation` = :invitation,
                      `email` = :email,
-                     `updated` = CURRENT_TIME() 
+                     `updated` = CURRENT_TIME()
                 WHERE  `id` = :id;";
-        
+
         $stmt = $this->dbh->prepare($sql);
         $res = $stmt->execute(array(
             'headline' => $this->headline,

@@ -1,5 +1,6 @@
 <?php
 
+require_once "Mailer.php";
 require_once "Poster.php";
 require_once "PosterService.php";
 require_once "DB.php";
@@ -11,7 +12,7 @@ $args = array(
     'headline' => FILTER_SANITIZE_FULL_SPECIAL_CHARS,
     'invitation' => FILTER_SANITIZE_STRING,
     'pid' => array(
-        'filter' => FILTER_VALIDATE_REGEXP, 
+        'filter' => FILTER_VALIDATE_REGEXP,
         "options" => array("regexp" => "/^[a-z0-9]{32}/")
     )
 );
@@ -27,7 +28,7 @@ if ($input['pid']) {
         header('Location: http://www.misserpirat.dk/festinator/index.php?gg=ggg');
     }
 }
-$poster->setEmail($input['email']); 
+$poster->setEmail($input['email']);
 $poster->setHeadline($input['headline']);
 $poster->setInvitation($input['invitation']);
 $poster->save();

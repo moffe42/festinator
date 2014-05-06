@@ -5,6 +5,7 @@
 }
 #left {
 	width: 307px;
+	height: 1000px;
 	float: left;
 	background-color: #FAC02C;
 }
@@ -88,7 +89,7 @@ label {
   	position: absolute;
    	top: 81px;
    	left: 30px;
-   	width: 500px;
+   	width: 600px;
 	font-family: 'Open Sans', 'sans-serif';
 	font-style: italic;
  	font-weight: 400;
@@ -99,7 +100,7 @@ label {
   	position: absolute;
    	top: 240px;
    	left: 30px;
-   	width: 500px;
+   	width: 600px;
 	font-family: 'Open Sans', 'sans-serif';
  	font-weight: 100;
 	font-size: 1em;
@@ -111,8 +112,8 @@ label {
 #posterpdf {
     background-image: url(../image/plakat-large-notext.jpg);
     background-repeat: no-repeat;
-    width: 600px;
-    height: 850px;
+    width: 700px;
+    height: 990px;
 }
 #posterpdf h1 {
   	position: absolute;
