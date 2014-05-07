@@ -33,7 +33,7 @@ if (!$poster->loadById($id)) {
 			<div id="main">
 				<div id="postercontainer">
 					<div id="postermockup">
-						<img src="/festinator/image/plakat-large-notext.jpg" id="plakat">
+						<img src="/festinator/image/plakat-large-notext_v2.jpg" id="plakat">
 						<h1 id="posterheadline"><?= $poster->getHeadline() ?></h1>
 						<p id="posterinvitation"><?= str_replace(array("\r\n","\r","\n"),"<br/>", $poster->getInvitation()) ?></p>
 					</div>

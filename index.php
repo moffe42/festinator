@@ -62,7 +62,7 @@ if ($pid) {
 				</div>
 				<div id="right">
 					<div id="postermockup">
-						<img src="/festinator/image/plakat-large-notext.jpg" id="plakat">
+						<img src="/festinator/image/plakat-large-notext_v2.jpg" id="plakat">
 						<h1 id="posterheadline">Festudvalget inviterer til &aring;rets sommerfest</h1>
 						<p id="posterinvitation">Bacon ipsum dolor sit amet boudin turkey brisket meatloaf. Doner shoulder ribeye chicken chuck. Landjaeger ham hock shankle hamburger pork belly tri-tip pork shoulder spare ribs sirloin jerky tail capicola rump shank. Bresaola pork loin ham hock, brisket capicola flank kielbasa shoulder ribeye chicken jowl ham. Shoulder tri-tip pancetta boudin, porchetta spare ribs andouille ball tip pork belly rump. Ham hock andouille flank pork chop. Flank kielbasa pig ground round bacon. Porchetta pancetta pork belly pork spare ribs hamburger drumstick biltong ball tip beef ribs shoulder, salami meatball.</p>
 					</div>
